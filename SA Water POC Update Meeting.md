@@ -1,0 +1,7 @@
+- run through demo for internet access
+	- get involved in training call
+- Taric rec: when we are all online, run the update through Genetec update service
+- Kangaroo detection is main feature to open up
+	- reliant on Bosch
+	- most processing is done on edge
+	- based on camera manufacturers, not VMS
