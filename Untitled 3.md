@@ -1,0 +1,26 @@
+Configure FH Edge
+- git clone config repo
+- run fhconf.sh
+- Install
+- Add site name from proj docs
+- Install battery connector
+- run fhconf.sh
+- configure -> mosquitto
+	- site name - same as first entered
+	- broker address - "broker"
+	- config user - edgeclient:Ko89!hS3cW!&mL5j
+- configure -> logo
+	- use design report to get logo input / outputs
+- configure -> cameras
+	- use design report for num cameras
+	- password will need to be setup manually in /etc/asphalt.conf *if each cameras has a different password*
+	- use deaulft
+- go back to home
+- hostname - SiteName dash edge number in site, ie: Nelson-1
+- go to /etc/asphalt.conf
+	- edit logo settings to include the following lines:
+		- logo_write_start=0
+		- logo_write_end=8
+- check that /etc/mosquitto/conf.d/default.conf contains the following:
+	- topic FultonHogan/Asphalt/${siteName}/# both 0
+	- where siteName matches the configured siteName in /etc/asphalt.conf
