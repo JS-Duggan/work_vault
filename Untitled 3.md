@@ -8,7 +8,7 @@ Configure FH Edge
 - configure -> mosquitto
 	- site name - same as first entered
 	- broker address - "broker"
-	- config user - edgeclient:Ko89!hS3cW!&mL5j
+	- config user - sageadmin:S@geAutom@tion2010
 - configure -> logo
 	- use design report to get logo input / outputs
 - configure -> cameras
