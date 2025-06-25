@@ -24,3 +24,9 @@ Configure FH Edge
 - check that /etc/mosquitto/conf.d/default.conf contains the following:
 	- topic FultonHogan/Asphalt/${siteName}/# both 0
 	- where siteName matches the configured siteName in /etc/asphalt.conf
+- configure modbus-connecter
+		- go to `/usr/share/edge-modbus-connector/app/config`
+		- open config.json
+		- paste in specific conf file for battery type, found at [config · main · Edge / Edge Apps / edge-battery-connector · GitLab](https://git.gotosage.com/edge/edge-apps/edge-battery-connector/-/tree/main/config?ref_type=heads)
+- provide top level ip address 192.168.0.1 and netmasak 255.255.255.0
+ 
