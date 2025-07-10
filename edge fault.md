@@ -1,0 +1,6 @@
+### Understanding
+The Edge is restarting hourly. this is preceded by a period of ~10 minutes where it is offline. This causes all communication with the edge to halt during the roughly 15 minutes it is either offline or rebooting, bringing the edge to about 75% uptime, which is unacceptable for a production unit.
+
+I have looked into the system watchdog and the cron jobs running on the edge. I do not think that either of these processes are causing the restarts. the watchdog has a timeout of 15 seconds, so a restart running every hour would need to be cause by another process overloading system resources so that the watchdog could not be pinged, and the CPU graph shows no activity that could cause this. The only cron job running saves the system clock, and has no relevance to system reboots. Both services also do not explain the network outages that precede the reboot. 
+
+I believe that the restarts are due to some fault in the service managing network communication, as I am aware that if the device loses network connectivity for an extended time, it will restart, or a problem with the SIM card that is causing the device to lose connection. 
